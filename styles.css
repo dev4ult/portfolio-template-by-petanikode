@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Radio Canada', sans-serif;
+  color: #134662;
+}
+
+body {
+  background-color: #f4f4f4;
+  padding: 0 2.5rem;
+}
+
+body a {
+  text-decoration: none;
+  color: #134662;
+}
+
+body hr {
+  background-color: #d8d2cb;
+  padding: 1.5px;
+  border: none;
+}
+
+main #overview p, main #overview table, main #biodata table {
+  margin: 0 auto;
+}
+
+nav {
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav a {
+  font-size: 1.2rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#134662));
+  background: linear-gradient(#134662);
+  background-position: center bottom;
+  background-size: 0% 2.5px;
+  background-repeat: no-repeat;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+  font-weight: 600;
+}
+
+nav a:hover {
+  background-size: 100% 2.5px;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 2rem;
+  list-style: none;
+}
+
+header {
+  padding: 3rem 0;
+  text-align: center;
+  background-color: #d8d2cb;
+  margin: 0.4rem 0;
+}
+
+header img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 250px;
+  width: 250px;
+  border: 4px solid #f4f4f4;
+  outline: 5px solid #d8d2cb;
+  border-radius: 50%;
+}
+
+header h1 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+header h3 {
+  letter-spacing: 3px;
+  font-size: 1.49rem;
+}
+
+main p {
+  font-size: 1.4rem;
+}
+
+main #overview {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+main #overview h2 {
+  margin-bottom: 1rem;
+  font-style: italic;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+main #overview p {
+  width: 50%;
+  margin-bottom: 5rem;
+}
+
+main #overview table {
+  border-spacing: 2rem 0;
+}
+
+main #overview table tr:not(:first-child) {
+  text-align: left;
+}
+
+main #overview table tr:not(:first-child) td {
+  padding: 1rem 1rem;
+}
+
+main #overview table tr:first-child td {
+  border-bottom: 2px solid black;
+}
+
+main #overview table td {
+  padding: 0.3rem 0;
+  font-size: 1.5rem;
+}
+
+main #overview table td li {
+  list-style: '- ';
+}
+
+main #about-me {
+  padding: 4rem 5rem;
+  background-color: #d8d2cb;
+  margin: 0.4rem 0;
+}
+
+main #about-me h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+main #about-me p {
+  margin-bottom: 2rem;
+}
+
+main #about-me video {
+  border: 5px solid #f4f4f4;
+}
+
+main #contact-me {
+  padding: 4rem 5rem;
+}
+
+main #contact-me h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+main #contact-me label {
+  display: block;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+main #contact-me input,
+main #contact-me textarea {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 5px solid #d8d2cb;
+}
+
+main #contact-me input:focus,
+main #contact-me textarea:focus {
+  outline: 2px solid #9595ff;
+}
+
+main #contact-me input[type='submit'] {
+  padding: 0.2rem 0.5rem;
+  font-weight: bold;
+}
+
+main #biodata {
+  padding: 4rem 5rem;
+}
+
+main #biodata h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+main #biodata table {
+  border-spacing: 0 1rem;
+}
+
+main #biodata table tr:nth-of-type(2n - 1) {
+  background-color: #d8d2cb;
+}
+
+main #biodata table td {
+  font-size: 2rem;
+  padding: 0.2rem 2.5rem;
+}
+
+footer {
+  padding: 1rem 0;
+  background-color: #d8d2cb;
+  margin: 0.4rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap');
+
+$background-color: #f4f4f4;
+$section-bg-color: #d8d2cb;
+$hr-color: #d8d2cb;
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Radio Canada', sans-serif;
+  color: #134662;
+}
+
+body {
+  background-color: $background-color;
+  padding: 0 2.5rem;
+  a {
+    text-decoration: none;
+    color: #134662;
+  }
+
+  hr {
+    background-color: $hr-color;
+    padding: 1.5px;
+    border: none;
+  }
+}
+
+@mixin padding-vertical($height: 1rem) {
+  padding: $height 0;
+}
+
+@mixin padding-horizontal($width: 1rem) {
+  padding: 0 $width;
+}
+
+@mixin padding-hor-ver($width: 1rem, $height: 1rem) {
+  padding: $height $width;
+}
+
+%align-center-margin {
+  margin: 0 auto;
+}
+
+nav {
+  @include padding-vertical;
+  display: flex;
+  justify-content: space-between;
+  a {
+    font-size: 1.2rem;
+    background: linear-gradient(#134662);
+    background-position: center bottom;
+    background-size: 0% 2.5px;
+    background-repeat: no-repeat;
+    transition: 300ms ease;
+    font-weight: 600;
+  }
+
+  a:hover {
+    background-size: 100% 2.5px;
+    transition: 300ms ease;
+  }
+
+  ul {
+    display: flex;
+    li {
+      margin-left: 2rem;
+      list-style: none;
+    }
+  }
+}
+
+header {
+  @include padding-vertical(3rem);
+  text-align: center;
+  background-color: $section-bg-color;
+  margin: 0.4rem 0;
+  img {
+    object-fit: cover;
+    height: 250px;
+    width: 250px;
+    border: 4px solid $background-color;
+    outline: 5px solid $hr-color;
+    border-radius: 50%;
+  }
+
+  h1 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    letter-spacing: 3px;
+    font-size: 1.49rem;
+  }
+}
+
+main {
+  p {
+    font-size: 1.4rem;
+  }
+  #overview {
+    @include padding-vertical(4rem);
+    text-align: center;
+    h2 {
+      margin-bottom: 1rem;
+      font-style: italic;
+      font-size: 1.7rem;
+      font-weight: 400;
+    }
+    p {
+      @extend %align-center-margin;
+      width: 50%;
+      margin-bottom: 5rem;
+    }
+    table {
+      @extend %align-center-margin;
+      border-spacing: 2rem 0;
+      tr:not(:first-child) {
+        text-align: left;
+        td {
+          @include padding-hor-ver;
+        }
+      }
+      tr:first-child {
+        td {
+          border-bottom: 2px solid black;
+        }
+      }
+      td {
+        @include padding-vertical(0.3rem);
+        font-size: 1.5rem;
+        li {
+          list-style: '- ';
+        }
+      }
+    }
+  }
+
+  #about-me {
+    @include padding-hor-ver(5rem, 4rem);
+    background-color: $section-bg-color;
+    margin: 0.4rem 0;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    p {
+      margin-bottom: 2rem;
+    }
+    video {
+      border: 5px solid $background-color;
+    }
+  }
+
+  #contact-me {
+    @include padding-hor-ver(5rem, 4rem);
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    label {
+      display: block;
+      font-size: 1.5rem;
+      margin: 0.5rem 0;
+    }
+    input,
+    textarea {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border: 5px solid $section-bg-color;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: 2px solid rgb(149, 149, 255);
+    }
+
+    input[type='submit'] {
+      padding: 0.2rem 0.5rem;
+      font-weight: bold;
+    }
+  }
+
+  #biodata {
+    @include padding-hor-ver(5rem, 4rem);
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    table {
+      @extend %align-center-margin;
+      border-spacing: 0 1rem;
+      tr:nth-of-type(2n - 1) {
+        background-color: $section-bg-color;
+      }
+
+      td {
+        font-size: 2rem;
+        padding: 0.2rem 2.5rem;
+      }
+
+      // td:nth-of-type(3n - 2) {
+      //   text-align: right;
+      // }
+    }
+  }
+}
+
+footer {
+  @include padding-vertical();
+  background-color: $section-bg-color;
+  margin: 0.4rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
